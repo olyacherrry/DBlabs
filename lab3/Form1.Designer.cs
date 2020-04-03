@@ -51,13 +51,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDishDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
@@ -266,22 +266,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Name ofDish";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(20, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 26);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "idDish";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -296,7 +280,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(663, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(663, 387);
             this.dataGridView1.TabIndex = 0;
             // 
             // idDishDataGridViewTextBoxColumn
@@ -331,6 +315,22 @@
             this.idCategoryDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idCategoryDataGridViewTextBoxColumn.Name = "idCategoryDataGridViewTextBoxColumn";
             this.idCategoryDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "idDish";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(20, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(160, 26);
+            this.textBox1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -374,8 +374,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDishDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDishDataGridViewTextBoxColumn;
@@ -385,6 +383,8 @@
         private System.Windows.Forms.Button btReadTable;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

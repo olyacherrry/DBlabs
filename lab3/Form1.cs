@@ -16,6 +16,8 @@ namespace lab3
 
         private const string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\LearningBNTU\\6сем\\БазыДанных\\DBlabs\\DBlabs\\RestaurantApp.mdf;" +
             "Integrated Security=True";
+        //RestaurantAppDataSet restaurantAppDataSet = new RestaurantAppDataSet();
+
         public Form1()
         {
             InitializeComponent();
@@ -55,14 +57,14 @@ namespace lab3
 
         public void btProgramFill_Click(object sender, EventArgs e)
         {
-            var restDataSet = new DataSet("RestaurentApp");
-            var clientsTable = new DataTable("Dishes2");
+            var restDataSet = new DataSet("Restaurant");
+            var dishesTable = new DataTable("Dishes");
 
-            restDataSet.Tables.Add(clientsTable);
+            restDataSet.Tables.Add(dishesTable);
 
             var idColumn = new DataColumn("IdDish", typeof(int))
             {
-                Unique = true,
+                //Unique = true,
                 AllowDBNull = false,
                 AutoIncrement = true,
                 AutoIncrementSeed = 1,
@@ -70,24 +72,24 @@ namespace lab3
             };
 
             var nameColumn = new DataColumn("NameDish", typeof(string));
-            var priceColumn = new DataColumn("Price", typeof(decimal));
+            var priceColumn = new DataColumn("Price", typeof(float));
             var idCategoryColumn = new DataColumn("IdCategory", typeof(int))
             {
                 DefaultValue = 1
             };
 
-            clientsTable.Columns.Add(idColumn);
-            clientsTable.Columns.Add(nameColumn);
-            clientsTable.Columns.Add(priceColumn);
-            clientsTable.Columns.Add(idCategoryColumn);
+            dishesTable.Columns.Add(idColumn);
+            dishesTable.Columns.Add(nameColumn);
+            dishesTable.Columns.Add(priceColumn);
+            dishesTable.Columns.Add(idCategoryColumn);
 
-            clientsTable.PrimaryKey = new[] { clientsTable.Columns["IdDish"] };
+            dishesTable.PrimaryKey = new[] { dishesTable.Columns["IdDish"] };
 
-            clientsTable.Rows.Add(null, "Цезарь", 10, 1);
-            clientsTable.Rows.Add(null, "Бонито Ролл", 15, 1);
-            clientsTable.Rows.Add(null, "Борщ", 5, 2);
+            dishesTable.Rows.Add(null, "Цезарь", 10, 1);
+            dishesTable.Rows.Add(null, "Бонито Ролл", 15, 1);
+            dishesTable.Rows.Add(null, "Борщ", 5, 2);
 
-            foreach (DataRow row in clientsTable.Rows)
+            foreach (DataRow row in dishesTable.Rows)
             {
                 var result = row.ItemArray
                     .Aggregate((current, cell) => current + $" [{cell}] ");
@@ -97,19 +99,19 @@ namespace lab3
 
         private void btReadTable_Click(object sender, EventArgs e)
         {
-            dishesTableAdapter.Fill(RestaurantAppDataSet.Clients);
+            _ = dishesTableAdapter.Fill(restaurantAppDataSet.Dishes);
         }
 
         private void btAddClient_Click(object sender, EventArgs e)
         {
-            DataTable dishesDataTable = RestaurantAppDataSet.Dishes;
+            DataTable dishesDataTable = restaurantAppDataSet.Dishes;
             var row = dishesDataTable.NewRow();
-            row[1] = textBox1.Text;
-            row[2] = textBox2.Text;
-            row[3] = textBox3.Text;
-            row[4] = textBox4.Text;
+            row[0] = textBox1.Text;
+            row[1]= textBox2.Text;
+            row[2] = textBox3.Text;
+            row[3] = textBox4.Text;
             dishesDataTable.Rows.Add(row);
-            dishesTableAdapter.Update(RestaurantAppDataSet.DishesRow);
+            dishesTableAdapter.Update(restaurantAppDataSet.Dishes);
         }
     }
 }

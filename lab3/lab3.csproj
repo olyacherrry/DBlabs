@@ -59,6 +59,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RestaurantAppDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RestaurantAppDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestaurantAppDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +95,17 @@
     </None>
     <None Include="RestaurantAppDataSet.xss">
       <DependentUpon>RestaurantAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RestaurantAppDataSet1.xsc">
+      <DependentUpon>RestaurantAppDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RestaurantAppDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RestaurantAppDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RestaurantAppDataSet1.xss">
+      <DependentUpon>RestaurantAppDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
