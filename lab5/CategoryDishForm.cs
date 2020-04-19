@@ -36,5 +36,7 @@ namespace lab5
         {
             this.Close();
         }
+
+       
     }
 }

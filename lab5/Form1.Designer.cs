@@ -97,7 +97,7 @@
             this.Controls.Add(this.waitersbutton);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Ресторан";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -48,10 +48,9 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.categoryDishesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.categoryDishesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onmain_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDishesBindingNavigator)).BeginInit();
@@ -214,7 +213,6 @@
             this.categoryDishesDataGridView.AutoGenerateColumns = false;
             this.categoryDishesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.categoryDishesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.categoryDishesDataGridView.DataSource = this.categoryDishesBindingSource;
             this.categoryDishesDataGridView.Location = new System.Drawing.Point(12, 77);
@@ -223,23 +221,6 @@
             this.categoryDishesDataGridView.RowTemplate.Height = 28;
             this.categoryDishesDataGridView.Size = new System.Drawing.Size(370, 290);
             this.categoryDishesDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdCategory";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdCategory";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NameCategory";
-            this.dataGridViewTextBoxColumn2.HeaderText = "NameCategory";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // onmain_button
             // 
@@ -259,6 +240,14 @@
             this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Категория блюда";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NameCategory";
+            this.dataGridViewTextBoxColumn2.HeaderText = "NameCategory";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // CategoryDishForm
             // 
@@ -303,9 +292,8 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton categoryDishesBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView categoryDishesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button onmain_button;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
