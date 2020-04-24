@@ -14,7 +14,7 @@ namespace lab3
     public partial class Form1 : Form
     {
 
-        private const string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\LearningBNTU\\6сем\\БазыДанных\\DBlabs\\DBlabs\\RestaurantApp.mdf;" +
+        private const string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Labs\\DBlabs\\DBlabs\\RestaurantApp.mdf;" +
             "Integrated Security=True";
         //RestaurantAppDataSet restaurantAppDataSet = new RestaurantAppDataSet();
 
