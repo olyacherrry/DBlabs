@@ -27,6 +27,8 @@ namespace lab5
 
         private void DishForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.CategoryDishes". При необходимости она может быть перемещена или удалена.
+            this.categoryDishesTableAdapter.Fill(this.restaurantAppDataSet.CategoryDishes);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.Dishes". При необходимости она может быть перемещена или удалена.
             this.dishesTableAdapter.Fill(this.restaurantAppDataSet.Dishes);
 
