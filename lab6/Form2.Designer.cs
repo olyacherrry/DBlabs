@@ -41,10 +41,13 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKdboDishesdboCategoryDishesIdCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.onmain_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKdboDishesdboCategoryDishesIdCategoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // restaurantAppDataSet1
@@ -102,7 +105,7 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dishesDataGridView.DataSource = this.dishesBindingSource;
+            this.dishesDataGridView.DataSource = this.fKdboDishesdboCategoryDishesIdCategoryBindingSource;
             this.dishesDataGridView.Location = new System.Drawing.Point(12, 41);
             this.dishesDataGridView.Name = "dishesDataGridView";
             this.dishesDataGridView.Size = new System.Drawing.Size(437, 220);
@@ -133,11 +136,28 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "IdCategory";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
+            // fKdboDishesdboCategoryDishesIdCategoryBindingSource
+            // 
+            this.fKdboDishesdboCategoryDishesIdCategoryBindingSource.DataMember = "FK_dbo.Dishes_dbo.CategoryDishes_IdCategory";
+            this.fKdboDishesdboCategoryDishesIdCategoryBindingSource.DataSource = this.categoryDishesBindingSource;
+            // 
+            // onmain_button
+            // 
+            this.onmain_button.Location = new System.Drawing.Point(454, 206);
+            this.onmain_button.Margin = new System.Windows.Forms.Padding(2);
+            this.onmain_button.Name = "onmain_button";
+            this.onmain_button.Size = new System.Drawing.Size(95, 56);
+            this.onmain_button.TabIndex = 4;
+            this.onmain_button.Text = "на главную";
+            this.onmain_button.UseVisualStyleBackColor = true;
+            this.onmain_button.Click += new System.EventHandler(this.onmain_button_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 275);
+            this.ClientSize = new System.Drawing.Size(559, 273);
+            this.Controls.Add(this.onmain_button);
             this.Controls.Add(this.dishesDataGridView);
             this.Controls.Add(this.idCategoryComboBox);
             this.Name = "Form2";
@@ -147,6 +167,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoryDishesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKdboDishesdboCategoryDishesIdCategoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,5 +186,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.BindingSource fKdboDishesdboCategoryDishesIdCategoryBindingSource;
+        private System.Windows.Forms.Button onmain_button;
     }
 }

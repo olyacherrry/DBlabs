@@ -25,5 +25,10 @@ namespace lab6
             this.categoryDishesTableAdapter.Fill(this.restaurantAppDataSet1.CategoryDishes);
 
         }
+
+        private void onmain_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
