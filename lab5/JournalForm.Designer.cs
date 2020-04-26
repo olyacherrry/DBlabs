@@ -50,28 +50,27 @@
             this.onmain_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.journalSalesDataGridView = new System.Windows.Forms.DataGridView();
+            this.waitersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.restaurantLogsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.restaurantLogsTableAdapter = new lab5.RestaurantAppDataSetTableAdapters.RestaurantLogsTableAdapter();
             this.restaurantLogsDataGridView = new System.Windows.Forms.DataGridView();
-            this.waitersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dishesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.waitersTableAdapter = new lab5.RestaurantAppDataSetTableAdapters.WaitersTableAdapter();
+            this.dishesTableAdapter = new lab5.RestaurantAppDataSetTableAdapters.DishesTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dishesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dishesTableAdapter = new lab5.RestaurantAppDataSetTableAdapters.DishesTableAdapter();
-            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingNavigator)).BeginInit();
             this.journalSalesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -126,8 +125,9 @@
             this.journalSalesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.journalSalesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.journalSalesBindingNavigator.Name = "journalSalesBindingNavigator";
+            this.journalSalesBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.journalSalesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.journalSalesBindingNavigator.Size = new System.Drawing.Size(552, 31);
+            this.journalSalesBindingNavigator.Size = new System.Drawing.Size(828, 38);
             this.journalSalesBindingNavigator.TabIndex = 0;
             this.journalSalesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -137,13 +137,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 33);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -153,7 +153,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
@@ -162,7 +162,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -171,27 +171,28 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -199,7 +200,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -208,29 +209,28 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
             // journalSalesBindingNavigatorSaveItem
             // 
             this.journalSalesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.journalSalesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("journalSalesBindingNavigatorSaveItem.Image")));
             this.journalSalesBindingNavigatorSaveItem.Name = "journalSalesBindingNavigatorSaveItem";
-            this.journalSalesBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
+            this.journalSalesBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
             this.journalSalesBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.journalSalesBindingNavigatorSaveItem.Click += new System.EventHandler(this.journalSalesBindingNavigatorSaveItem_Click);
             // 
             // onmain_button
             // 
-            this.onmain_button.Location = new System.Drawing.Point(467, 268);
-            this.onmain_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.onmain_button.Location = new System.Drawing.Point(700, 412);
             this.onmain_button.Name = "onmain_button";
-            this.onmain_button.Size = new System.Drawing.Size(65, 56);
+            this.onmain_button.Size = new System.Drawing.Size(98, 86);
             this.onmain_button.TabIndex = 2;
             this.onmain_button.Text = "на главную";
             this.onmain_button.UseVisualStyleBackColor = true;
@@ -239,10 +239,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(163, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(244, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.Size = new System.Drawing.Size(128, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Журнал продаж";
             // 
@@ -255,13 +254,19 @@
             this.journalSalesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewTextBoxColumn3});
             this.journalSalesDataGridView.DataSource = this.journalSalesBindingSource;
-            this.journalSalesDataGridView.Location = new System.Drawing.Point(12, 37);
+            this.journalSalesDataGridView.Location = new System.Drawing.Point(18, 57);
+            this.journalSalesDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.journalSalesDataGridView.Name = "journalSalesDataGridView";
-            this.journalSalesDataGridView.Size = new System.Drawing.Size(443, 139);
+            this.journalSalesDataGridView.RowHeadersWidth = 62;
+            this.journalSalesDataGridView.Size = new System.Drawing.Size(664, 214);
             this.journalSalesDataGridView.TabIndex = 5;
+            // 
+            // waitersBindingSource
+            // 
+            this.waitersBindingSource.DataMember = "Waiters";
+            this.waitersBindingSource.DataSource = this.restaurantAppDataSet;
             // 
             // restaurantLogsBindingSource
             // 
@@ -274,6 +279,8 @@
             // 
             // restaurantLogsDataGridView
             // 
+            this.restaurantLogsDataGridView.AllowUserToAddRows = false;
+            this.restaurantLogsDataGridView.AllowUserToDeleteRows = false;
             this.restaurantLogsDataGridView.AutoGenerateColumns = false;
             this.restaurantLogsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.restaurantLogsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
@@ -282,63 +289,13 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn6});
             this.restaurantLogsDataGridView.DataSource = this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource;
-            this.restaurantLogsDataGridView.Location = new System.Drawing.Point(12, 182);
+            this.restaurantLogsDataGridView.Location = new System.Drawing.Point(18, 280);
+            this.restaurantLogsDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.restaurantLogsDataGridView.Name = "restaurantLogsDataGridView";
-            this.restaurantLogsDataGridView.Size = new System.Drawing.Size(443, 142);
+            this.restaurantLogsDataGridView.ReadOnly = true;
+            this.restaurantLogsDataGridView.RowHeadersWidth = 62;
+            this.restaurantLogsDataGridView.Size = new System.Drawing.Size(664, 218);
             this.restaurantLogsDataGridView.TabIndex = 5;
-            // 
-            // waitersBindingSource
-            // 
-            this.waitersBindingSource.DataMember = "Waiters";
-            this.waitersBindingSource.DataSource = this.restaurantAppDataSet;
-            // 
-            // waitersTableAdapter
-            // 
-            this.waitersTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdSale";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdSale";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "OrderDate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "OrderDate";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Amount";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Idwaiter";
-            this.dataGridViewTextBoxColumn4.DataSource = this.waitersBindingSource;
-            this.dataGridViewTextBoxColumn4.DisplayMember = "FirstName";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Idwaiter";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn4.ValueMember = "IdWaiter";
-            // 
-            // dishesBindingSource
-            // 
-            this.dishesBindingSource.DataMember = "Dishes";
-            this.dishesBindingSource.DataSource = this.restaurantAppDataSet;
-            // 
-            // dishesTableAdapter
-            // 
-            this.dishesTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource
-            // 
-            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataMember = "FK_dbo.RestaurantLogs_dbo.JournalSales_IdSale";
-            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataSource = this.journalSalesBindingSource;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -346,28 +303,71 @@
             this.dataGridViewTextBoxColumn7.DataSource = this.dishesBindingSource;
             this.dataGridViewTextBoxColumn7.DisplayMember = "NameDish";
             this.dataGridViewTextBoxColumn7.HeaderText = "IdDich";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn7.ValueMember = "IdDish";
+            // 
+            // dishesBindingSource
+            // 
+            this.dishesBindingSource.DataMember = "Dishes";
+            this.dishesBindingSource.DataSource = this.restaurantAppDataSet;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Amount";
             this.dataGridViewTextBoxColumn6.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource
+            // 
+            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataMember = "FK_dbo.RestaurantLogs_dbo.JournalSales_IdSale";
+            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataSource = this.journalSalesBindingSource;
+            // 
+            // waitersTableAdapter
+            // 
+            this.waitersTableAdapter.ClearBeforeFill = true;
+            // 
+            // dishesTableAdapter
+            // 
+            this.dishesTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdSale";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdSale";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "OrderDate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "OrderDate";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Amount";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // JournalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 333);
+            this.ClientSize = new System.Drawing.Size(828, 512);
             this.Controls.Add(this.restaurantLogsDataGridView);
             this.Controls.Add(this.journalSalesDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.onmain_button);
             this.Controls.Add(this.journalSalesBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "JournalForm";
             this.Text = "JournalForm";
             this.Load += new System.EventHandler(this.JournalForm_Load);
@@ -377,9 +377,9 @@
             this.journalSalesBindingNavigator.ResumeLayout(false);
             this.journalSalesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -414,14 +414,13 @@
         private System.Windows.Forms.DataGridView restaurantLogsDataGridView;
         private System.Windows.Forms.BindingSource waitersBindingSource;
         private RestaurantAppDataSetTableAdapters.WaitersTableAdapter waitersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource dishesBindingSource;
         private RestaurantAppDataSetTableAdapters.DishesTableAdapter dishesTableAdapter;
         private System.Windows.Forms.BindingSource fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

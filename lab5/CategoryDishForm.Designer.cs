@@ -48,9 +48,9 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.categoryDishesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.categoryDishesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onmain_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDishesBindingNavigator)).BeginInit();
@@ -109,7 +109,7 @@
             this.categoryDishesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.categoryDishesBindingNavigator.Name = "categoryDishesBindingNavigator";
             this.categoryDishesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.categoryDishesBindingNavigator.Size = new System.Drawing.Size(515, 33);
+            this.categoryDishesBindingNavigator.Size = new System.Drawing.Size(445, 33);
             this.categoryDishesBindingNavigator.TabIndex = 0;
             this.categoryDishesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -219,12 +219,20 @@
             this.categoryDishesDataGridView.Name = "categoryDishesDataGridView";
             this.categoryDishesDataGridView.RowHeadersWidth = 62;
             this.categoryDishesDataGridView.RowTemplate.Height = 28;
-            this.categoryDishesDataGridView.Size = new System.Drawing.Size(370, 290);
+            this.categoryDishesDataGridView.Size = new System.Drawing.Size(311, 290);
             this.categoryDishesDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NameCategory";
+            this.dataGridViewTextBoxColumn2.HeaderText = "NameCategory";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // onmain_button
             // 
-            this.onmain_button.Location = new System.Drawing.Point(406, 281);
+            this.onmain_button.Location = new System.Drawing.Point(341, 281);
             this.onmain_button.Name = "onmain_button";
             this.onmain_button.Size = new System.Drawing.Size(97, 86);
             this.onmain_button.TabIndex = 3;
@@ -241,19 +249,11 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Категория блюда";
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NameCategory";
-            this.dataGridViewTextBoxColumn2.HeaderText = "NameCategory";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
             // CategoryDishForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 379);
+            this.ClientSize = new System.Drawing.Size(445, 379);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.onmain_button);
             this.Controls.Add(this.categoryDishesDataGridView);

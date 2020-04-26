@@ -48,12 +48,12 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.waitersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.waitersDataGridView = new System.Windows.Forms.DataGridView();
-            this.onmain_button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onmain_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.waitersBindingNavigator)).BeginInit();
@@ -112,7 +112,7 @@
             this.waitersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.waitersBindingNavigator.Name = "waitersBindingNavigator";
             this.waitersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.waitersBindingNavigator.Size = new System.Drawing.Size(990, 33);
+            this.waitersBindingNavigator.Size = new System.Drawing.Size(1162, 33);
             this.waitersBindingNavigator.TabIndex = 0;
             this.waitersBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -225,27 +225,8 @@
             this.waitersDataGridView.Name = "waitersDataGridView";
             this.waitersDataGridView.RowHeadersWidth = 62;
             this.waitersDataGridView.RowTemplate.Height = 28;
-            this.waitersDataGridView.Size = new System.Drawing.Size(830, 414);
+            this.waitersDataGridView.Size = new System.Drawing.Size(1024, 414);
             this.waitersDataGridView.TabIndex = 1;
-            // 
-            // onmain_button
-            // 
-            this.onmain_button.Location = new System.Drawing.Point(865, 410);
-            this.onmain_button.Name = "onmain_button";
-            this.onmain_button.Size = new System.Drawing.Size(97, 86);
-            this.onmain_button.TabIndex = 3;
-            this.onmain_button.Text = "на главную";
-            this.onmain_button.UseVisualStyleBackColor = true;
-            this.onmain_button.Click += new System.EventHandler(this.onmain_button_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(326, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Офицанты";
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -279,11 +260,30 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 150;
             // 
+            // onmain_button
+            // 
+            this.onmain_button.Location = new System.Drawing.Point(1058, 410);
+            this.onmain_button.Name = "onmain_button";
+            this.onmain_button.Size = new System.Drawing.Size(97, 86);
+            this.onmain_button.TabIndex = 3;
+            this.onmain_button.Text = "на главную";
+            this.onmain_button.UseVisualStyleBackColor = true;
+            this.onmain_button.Click += new System.EventHandler(this.onmain_button_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(326, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Офицанты";
+            // 
             // WaitersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 508);
+            this.ClientSize = new System.Drawing.Size(1162, 505);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.onmain_button);
             this.Controls.Add(this.waitersDataGridView);
