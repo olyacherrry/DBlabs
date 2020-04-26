@@ -50,30 +50,29 @@
             this.onmain_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.journalSalesDataGridView = new System.Windows.Forms.DataGridView();
+            this.waitersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.restaurantLogsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.restaurantLogsTableAdapter = new lab5.RestaurantAppDataSetTableAdapters.RestaurantLogsTableAdapter();
-            this.restaurantLogsDataGridView = new System.Windows.Forms.DataGridView();
-            this.waitersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dishesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.waitersTableAdapter = new lab5.RestaurantAppDataSetTableAdapters.WaitersTableAdapter();
+            this.dishesTableAdapter = new lab5.RestaurantAppDataSetTableAdapters.DishesTableAdapter();
+            this.restaurantLogsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dishesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dishesTableAdapter = new lab5.RestaurantAppDataSetTableAdapters.DishesTableAdapter();
-            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingNavigator)).BeginInit();
             this.journalSalesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // restaurantAppDataSet
@@ -183,6 +182,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -228,7 +228,7 @@
             // onmain_button
             // 
             this.onmain_button.Location = new System.Drawing.Point(467, 268);
-            this.onmain_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.onmain_button.Margin = new System.Windows.Forms.Padding(2);
             this.onmain_button.Name = "onmain_button";
             this.onmain_button.Size = new System.Drawing.Size(65, 56);
             this.onmain_button.TabIndex = 2;
@@ -255,13 +255,17 @@
             this.journalSalesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewTextBoxColumn3});
             this.journalSalesDataGridView.DataSource = this.journalSalesBindingSource;
             this.journalSalesDataGridView.Location = new System.Drawing.Point(12, 37);
             this.journalSalesDataGridView.Name = "journalSalesDataGridView";
             this.journalSalesDataGridView.Size = new System.Drawing.Size(443, 139);
             this.journalSalesDataGridView.TabIndex = 5;
+            // 
+            // waitersBindingSource
+            // 
+            this.waitersBindingSource.DataMember = "Waiters";
+            this.waitersBindingSource.DataSource = this.restaurantAppDataSet;
             // 
             // restaurantLogsBindingSource
             // 
@@ -271,6 +275,24 @@
             // restaurantLogsTableAdapter
             // 
             this.restaurantLogsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dishesBindingSource
+            // 
+            this.dishesBindingSource.DataMember = "Dishes";
+            this.dishesBindingSource.DataSource = this.restaurantAppDataSet;
+            // 
+            // fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource
+            // 
+            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataMember = "FK_dbo.RestaurantLogs_dbo.JournalSales_IdSale";
+            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataSource = this.journalSalesBindingSource;
+            // 
+            // waitersTableAdapter
+            // 
+            this.waitersTableAdapter.ClearBeforeFill = true;
+            // 
+            // dishesTableAdapter
+            // 
+            this.dishesTableAdapter.ClearBeforeFill = true;
             // 
             // restaurantLogsDataGridView
             // 
@@ -287,14 +309,23 @@
             this.restaurantLogsDataGridView.Size = new System.Drawing.Size(443, 142);
             this.restaurantLogsDataGridView.TabIndex = 5;
             // 
-            // waitersBindingSource
+            // dataGridViewTextBoxColumn7
             // 
-            this.waitersBindingSource.DataMember = "Waiters";
-            this.waitersBindingSource.DataSource = this.restaurantAppDataSet;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "IdDich";
+            this.dataGridViewTextBoxColumn7.DataSource = this.dishesBindingSource;
+            this.dataGridViewTextBoxColumn7.DisplayMember = "NameDish";
+            this.dataGridViewTextBoxColumn7.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.dataGridViewTextBoxColumn7.HeaderText = "IdDich";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn7.ValueMember = "IdDish";
             // 
-            // waitersTableAdapter
+            // dataGridViewTextBoxColumn6
             // 
-            this.waitersTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Amount";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -315,48 +346,6 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Idwaiter";
-            this.dataGridViewTextBoxColumn4.DataSource = this.waitersBindingSource;
-            this.dataGridViewTextBoxColumn4.DisplayMember = "FirstName";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Idwaiter";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn4.ValueMember = "IdWaiter";
-            // 
-            // dishesBindingSource
-            // 
-            this.dishesBindingSource.DataMember = "Dishes";
-            this.dishesBindingSource.DataSource = this.restaurantAppDataSet;
-            // 
-            // dishesTableAdapter
-            // 
-            this.dishesTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource
-            // 
-            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataMember = "FK_dbo.RestaurantLogs_dbo.JournalSales_IdSale";
-            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataSource = this.journalSalesBindingSource;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "IdDich";
-            this.dataGridViewTextBoxColumn7.DataSource = this.dishesBindingSource;
-            this.dataGridViewTextBoxColumn7.DisplayMember = "NameDish";
-            this.dataGridViewTextBoxColumn7.HeaderText = "IdDich";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn7.ValueMember = "IdDish";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Amount";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // JournalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,7 +356,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.onmain_button);
             this.Controls.Add(this.journalSalesBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "JournalForm";
             this.Text = "JournalForm";
             this.Load += new System.EventHandler(this.JournalForm_Load);
@@ -377,11 +366,11 @@
             this.journalSalesBindingNavigator.ResumeLayout(false);
             this.journalSalesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,17 +400,16 @@
         private System.Windows.Forms.DataGridView journalSalesDataGridView;
         private System.Windows.Forms.BindingSource restaurantLogsBindingSource;
         private RestaurantAppDataSetTableAdapters.RestaurantLogsTableAdapter restaurantLogsTableAdapter;
-        private System.Windows.Forms.DataGridView restaurantLogsDataGridView;
         private System.Windows.Forms.BindingSource waitersBindingSource;
         private RestaurantAppDataSetTableAdapters.WaitersTableAdapter waitersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource dishesBindingSource;
         private RestaurantAppDataSetTableAdapters.DishesTableAdapter dishesTableAdapter;
         private System.Windows.Forms.BindingSource fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource;
+        private System.Windows.Forms.DataGridView restaurantLogsDataGridView;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
