@@ -62,8 +62,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.categoryDishesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoryDishesTableAdapter = new lab6.RestaurantAppDataSetTableAdapters.CategoryDishesTableAdapter();
-            this.dishesDataGridView = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dishesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -126,7 +127,7 @@
             this.dishesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.dishesBindingNavigator.Name = "dishesBindingNavigator";
             this.dishesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.dishesBindingNavigator.Size = new System.Drawing.Size(477, 31);
+            this.dishesBindingNavigator.Size = new System.Drawing.Size(485, 31);
             this.dishesBindingNavigator.TabIndex = 0;
             this.dishesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -182,6 +183,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -358,33 +360,40 @@
             // 
             this.categoryDishesTableAdapter.ClearBeforeFill = true;
             // 
-            // dishesDataGridView
-            // 
-            this.dishesDataGridView.AutoGenerateColumns = false;
-            this.dishesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dishesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dishesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dishesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dishesDataGridView.DataSource = this.dishesBindingSource;
-            this.dishesDataGridView.Location = new System.Drawing.Point(8, 49);
-            this.dishesDataGridView.Name = "dishesDataGridView";
-            this.dishesDataGridView.Size = new System.Drawing.Size(356, 288);
-            this.dishesDataGridView.TabIndex = 28;
-            // 
             // comboBox1
             // 
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dishesBindingSource, "IdCategory", true));
             this.comboBox1.DataSource = this.categoryDishesBindingSource;
-            this.comboBox1.DisplayMember = "IdCategory";
+            this.comboBox1.DisplayMember = "NameCategory";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(70, 395);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(239, 21);
             this.comboBox1.TabIndex = 29;
             this.comboBox1.ValueMember = "IdCategory";
+            // 
+            // dishesDataGridView
+            // 
+            this.dishesDataGridView.AutoGenerateColumns = false;
+            this.dishesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dishesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dishesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dishesDataGridView.DataSource = this.dishesBindingSource;
+            this.dishesDataGridView.Location = new System.Drawing.Point(12, 49);
+            this.dishesDataGridView.Name = "dishesDataGridView";
+            this.dishesDataGridView.Size = new System.Drawing.Size(350, 288);
+            this.dishesDataGridView.TabIndex = 29;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdDish";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdDish";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -405,7 +414,6 @@
             this.dataGridViewTextBoxColumn4.DisplayMember = "NameCategory";
             this.dataGridViewTextBoxColumn4.HeaderText = "IdCategory";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn4.ValueMember = "IdCategory";
@@ -414,9 +422,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 454);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(485, 462);
             this.Controls.Add(this.dishesDataGridView);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonRemove);
@@ -481,8 +489,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource categoryDishesBindingSource;
         private RestaurantAppDataSetTableAdapters.CategoryDishesTableAdapter categoryDishesTableAdapter;
-        private System.Windows.Forms.DataGridView dishesDataGridView;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dishesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
