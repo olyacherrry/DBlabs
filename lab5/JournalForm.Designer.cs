@@ -49,7 +49,6 @@
             this.journalSalesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.onmain_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.journalSalesDataGridView = new System.Windows.Forms.DataGridView();
             this.waitersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.restaurantLogsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.restaurantLogsTableAdapter = new lab5.RestaurantAppDataSetTableAdapters.RestaurantLogsTableAdapter();
@@ -60,19 +59,20 @@
             this.restaurantLogsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.journalSalesDataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingNavigator)).BeginInit();
             this.journalSalesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // restaurantAppDataSet
@@ -182,7 +182,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -245,22 +244,6 @@
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Журнал продаж";
-            // 
-            // journalSalesDataGridView
-            // 
-            this.journalSalesDataGridView.AutoGenerateColumns = false;
-            this.journalSalesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.journalSalesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.journalSalesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.journalSalesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.journalSalesDataGridView.DataSource = this.journalSalesBindingSource;
-            this.journalSalesDataGridView.Location = new System.Drawing.Point(12, 37);
-            this.journalSalesDataGridView.Name = "journalSalesDataGridView";
-            this.journalSalesDataGridView.Size = new System.Drawing.Size(443, 139);
-            this.journalSalesDataGridView.TabIndex = 5;
             // 
             // waitersBindingSource
             // 
@@ -327,12 +310,11 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdSale";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdSale";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Amount";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -340,11 +322,28 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "OrderDate";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // dataGridViewTextBoxColumn3
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Amount";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdSale";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdSale";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // journalSalesDataGridView
+            // 
+            this.journalSalesDataGridView.AutoGenerateColumns = false;
+            this.journalSalesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.journalSalesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.journalSalesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.journalSalesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.journalSalesDataGridView.DataSource = this.journalSalesBindingSource;
+            this.journalSalesDataGridView.Location = new System.Drawing.Point(12, 37);
+            this.journalSalesDataGridView.Name = "journalSalesDataGridView";
+            this.journalSalesDataGridView.Size = new System.Drawing.Size(443, 139);
+            this.journalSalesDataGridView.TabIndex = 5;
             // 
             // JournalForm
             // 
@@ -365,12 +364,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingNavigator)).EndInit();
             this.journalSalesBindingNavigator.ResumeLayout(false);
             this.journalSalesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.waitersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,7 +396,6 @@
         private System.Windows.Forms.ToolStripButton journalSalesBindingNavigatorSaveItem;
         private System.Windows.Forms.Button onmain_button;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView journalSalesDataGridView;
         private System.Windows.Forms.BindingSource restaurantLogsBindingSource;
         private RestaurantAppDataSetTableAdapters.RestaurantLogsTableAdapter restaurantLogsTableAdapter;
         private System.Windows.Forms.BindingSource waitersBindingSource;
@@ -408,8 +406,9 @@
         private System.Windows.Forms.DataGridView restaurantLogsDataGridView;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridView journalSalesDataGridView;
     }
 }

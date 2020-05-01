@@ -62,12 +62,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.categoryDishesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoryDishesTableAdapter = new lab6.RestaurantAppDataSetTableAdapters.CategoryDishesTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dishesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingNavigator)).BeginInit();
@@ -360,18 +360,6 @@
             // 
             this.categoryDishesTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dishesBindingSource, "IdCategory", true));
-            this.comboBox1.DataSource = this.categoryDishesBindingSource;
-            this.comboBox1.DisplayMember = "NameCategory";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(70, 395);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(239, 21);
-            this.comboBox1.TabIndex = 29;
-            this.comboBox1.ValueMember = "IdCategory";
-            // 
             // dishesDataGridView
             // 
             this.dishesDataGridView.AutoGenerateColumns = false;
@@ -418,13 +406,26 @@
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn4.ValueMember = "IdCategory";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dishesBindingSource, "IdCategory", true));
+            this.comboBox1.DataSource = this.categoryDishesBindingSource;
+            this.comboBox1.DisplayMember = "NameCategory";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(70, 392);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(239, 21);
+            this.comboBox1.TabIndex = 30;
+            this.comboBox1.ValueMember = "IdCategory";
+            // 
             // DishForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 462);
-            this.Controls.Add(this.dishesDataGridView);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dishesDataGridView);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonRemove);
@@ -489,11 +490,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource categoryDishesBindingSource;
         private RestaurantAppDataSetTableAdapters.CategoryDishesTableAdapter categoryDishesTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dishesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
