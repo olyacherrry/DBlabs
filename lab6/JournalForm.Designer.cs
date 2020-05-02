@@ -546,7 +546,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(72, 21);
             this.button5.TabIndex = 14;
-            this.button5.Text = "Добавить";
+            this.button5.Text = "Сохранить";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
