@@ -27,10 +27,6 @@ namespace lab7
 
         private void JournalForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.Dishes". При необходимости она может быть перемещена или удалена.
-            this.dishesTableAdapter.Fill(this.restaurantAppDataSet.Dishes);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.JournalSales". При необходимости она может быть перемещена или удалена.
-            this.journalSalesTableAdapter.Fill(this.restaurantAppDataSet.JournalSales);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.RestaurantLogs". При необходимости она может быть перемещена или удалена.
             this.restaurantLogsTableAdapter.Fill(this.restaurantAppDataSet.RestaurantLogs);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.Dishes". При необходимости она может быть перемещена или удалена.
@@ -55,7 +51,7 @@ namespace lab7
 
             this.Validate();
             this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.EndEdit();
-            textBox1.Text = Summa().ToString();
+            textBox1.Text = Summa.ToString();
             this.journalSalesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.restaurantAppDataSet);
         }
@@ -71,19 +67,22 @@ namespace lab7
             textBox3.Text = DateTime.Now.ToString();
             textBox1.Text = "0,0";  
         }
-        private double Summa()
+        private double Summa
         {
-            double summa = 0;
-            for(int i = 0; i < restaurantLogsDataGridView.Rows.Count; i++)
+            get
             {
-                if (restaurantLogsDataGridView[1, i].Value != null)
+                double summa = 0;
+                for (int i = 0; i < restaurantLogsDataGridView.Rows.Count; i++)
                 {
-                    int amount = Convert.ToInt32(restaurantLogsDataGridView[1, i].Value);
-                    RestaurantAppDataSet.DishesRow price =  restaurantAppDataSet.Dishes.FirstOrDefault(x => x.IdDish == Convert.ToInt32(restaurantLogsDataGridView[2, i].Value));
-                    summa += (price.Price * amount);
+                    if (restaurantLogsDataGridView[1, i].Value != null)
+                    {
+                        int amount = Convert.ToInt32(restaurantLogsDataGridView[1, i].Value);
+                        RestaurantAppDataSet.DishesRow price = restaurantAppDataSet.Dishes.FirstOrDefault(x => x.IdDish == Convert.ToInt32(restaurantLogsDataGridView[2, i].Value));
+                        summa += (price.Price * amount);
+                    }
                 }
+                return summa;
             }
-            return summa;
         }
 
         private void button5_Click(object sender, EventArgs e)
