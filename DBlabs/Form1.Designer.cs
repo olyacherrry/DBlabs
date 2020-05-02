@@ -1,4 +1,4 @@
-﻿namespace DBlabs
+﻿namespace lab2
 {
     partial class Form1
     {

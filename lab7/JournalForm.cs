@@ -27,6 +27,10 @@ namespace lab7
 
         private void JournalForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.Dishes". При необходимости она может быть перемещена или удалена.
+            this.dishesTableAdapter.Fill(this.restaurantAppDataSet.Dishes);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.JournalSales". При необходимости она может быть перемещена или удалена.
+            this.journalSalesTableAdapter.Fill(this.restaurantAppDataSet.JournalSales);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.RestaurantLogs". При необходимости она может быть перемещена или удалена.
             this.restaurantLogsTableAdapter.Fill(this.restaurantAppDataSet.RestaurantLogs);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.Dishes". При необходимости она может быть перемещена или удалена.
@@ -75,7 +79,7 @@ namespace lab7
                 if (restaurantLogsDataGridView[1, i].Value != null)
                 {
                     int amount = Convert.ToInt32(restaurantLogsDataGridView[1, i].Value);
-                    RestaurantAppDataSet.DishesRow price =  restaurantAppDataSet.Dishes.FirstOrDefault(x => x.IdDish == Convert.ToInt32(restaurantLogsDataGridView[4, i].Value));
+                    RestaurantAppDataSet.DishesRow price =  restaurantAppDataSet.Dishes.FirstOrDefault(x => x.IdDish == Convert.ToInt32(restaurantLogsDataGridView[2, i].Value));
                     summa += (price.Price * amount);
                 }
             }

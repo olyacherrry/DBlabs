@@ -98,6 +98,8 @@
             // 
             // dishesDataGridView
             // 
+            this.dishesDataGridView.AllowUserToAddRows = false;
+            this.dishesDataGridView.AllowUserToDeleteRows = false;
             this.dishesDataGridView.AutoGenerateColumns = false;
             this.dishesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dishesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -108,6 +110,7 @@
             this.dishesDataGridView.DataSource = this.fKdboDishesdboCategoryDishesIdCategoryBindingSource;
             this.dishesDataGridView.Location = new System.Drawing.Point(12, 41);
             this.dishesDataGridView.Name = "dishesDataGridView";
+            this.dishesDataGridView.ReadOnly = true;
             this.dishesDataGridView.Size = new System.Drawing.Size(437, 220);
             this.dishesDataGridView.TabIndex = 2;
             // 
@@ -123,18 +126,21 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "NameDish";
             this.dataGridViewTextBoxColumn2.HeaderText = "NameDish";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Price";
             this.dataGridViewTextBoxColumn3.HeaderText = "Price";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "IdCategory";
             this.dataGridViewTextBoxColumn4.HeaderText = "IdCategory";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // fKdboDishesdboCategoryDishesIdCategoryBindingSource
             // 
@@ -152,7 +158,7 @@
             this.onmain_button.UseVisualStyleBackColor = true;
             this.onmain_button.Click += new System.EventHandler(this.onmain_button_Click);
             // 
-            // Form2
+            // connectedTables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +166,7 @@
             this.Controls.Add(this.onmain_button);
             this.Controls.Add(this.dishesDataGridView);
             this.Controls.Add(this.idCategoryComboBox);
-            this.Name = "Form2";
+            this.Name = "connectedTables";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet1)).EndInit();

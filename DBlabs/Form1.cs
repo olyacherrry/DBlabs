@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.String;
 
-namespace DBlabs
+namespace lab2
 {
     public partial class Form1 : Form
 

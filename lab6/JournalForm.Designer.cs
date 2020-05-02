@@ -34,6 +34,7 @@
             this.journalSalesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.journalSalesTableAdapter = new lab6.RestaurantAppDataSetTableAdapters.JournalSalesTableAdapter();
             this.tableAdapterManager = new lab6.RestaurantAppDataSetTableAdapters.TableAdapterManager();
+            this.restaurantLogsTableAdapter = new lab6.RestaurantAppDataSetTableAdapters.RestaurantLogsTableAdapter();
             this.journalSalesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -48,9 +49,13 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.journalSalesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.journalSalesDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onmain_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -61,34 +66,29 @@
             this.dishesTableAdapter = new lab6.RestaurantAppDataSetTableAdapters.DishesTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.restaurantLogsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.restaurantLogsTableAdapter = new lab6.RestaurantAppDataSetTableAdapters.RestaurantLogsTableAdapter();
             this.restaurantLogsDataGridView = new System.Windows.Forms.DataGridView();
-            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDich = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingNavigator)).BeginInit();
             this.journalSalesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,6 +115,10 @@
             this.tableAdapterManager.RestaurantLogsTableAdapter = this.restaurantLogsTableAdapter;
             this.tableAdapterManager.UpdateOrder = lab6.RestaurantAppDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.WaitersTableAdapter = null;
+            // 
+            // restaurantLogsTableAdapter
+            // 
+            this.restaurantLogsTableAdapter.ClearBeforeFill = true;
             // 
             // journalSalesBindingNavigator
             // 
@@ -200,6 +204,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -254,17 +259,38 @@
             this.dataGridViewTextBoxColumn3});
             this.journalSalesDataGridView.DataSource = this.journalSalesBindingSource;
             this.journalSalesDataGridView.Location = new System.Drawing.Point(8, 45);
-            this.journalSalesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.journalSalesDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.journalSalesDataGridView.Name = "journalSalesDataGridView";
             this.journalSalesDataGridView.RowHeadersWidth = 62;
             this.journalSalesDataGridView.RowTemplate.Height = 28;
             this.journalSalesDataGridView.Size = new System.Drawing.Size(465, 161);
             this.journalSalesDataGridView.TabIndex = 1;
             // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "IdSale";
+            this.Column2.HeaderText = "id";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "OrderDate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "OrderDate";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Amount";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
             // onmain_button
             // 
             this.onmain_button.Location = new System.Drawing.Point(720, 294);
-            this.onmain_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.onmain_button.Margin = new System.Windows.Forms.Padding(2);
             this.onmain_button.Name = "onmain_button";
             this.onmain_button.Size = new System.Drawing.Size(98, 58);
             this.onmain_button.TabIndex = 2;
@@ -286,10 +312,15 @@
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource, "Amount", true));
             this.textBox2.Location = new System.Drawing.Point(81, 45);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(147, 20);
             this.textBox2.TabIndex = 7;
+            // 
+            // fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource
+            // 
+            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataMember = "FK_dbo.RestaurantLogs_dbo.JournalSales_IdSale";
+            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataSource = this.journalSalesBindingSource;
             // 
             // label2
             // 
@@ -314,7 +345,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(81, 69);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 21);
             this.button1.TabIndex = 10;
@@ -325,7 +356,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(5, 69);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(72, 21);
             this.button2.TabIndex = 11;
@@ -336,7 +367,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(157, 69);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(72, 21);
             this.button3.TabIndex = 12;
@@ -385,10 +416,6 @@
             this.restaurantLogsBindingSource.DataMember = "RestaurantLogs";
             this.restaurantLogsBindingSource.DataSource = this.restaurantAppDataSet;
             // 
-            // restaurantLogsTableAdapter
-            // 
-            this.restaurantLogsTableAdapter.ClearBeforeFill = true;
-            // 
             // restaurantLogsDataGridView
             // 
             this.restaurantLogsDataGridView.AutoGenerateColumns = false;
@@ -406,76 +433,6 @@
             this.restaurantLogsDataGridView.Name = "restaurantLogsDataGridView";
             this.restaurantLogsDataGridView.Size = new System.Drawing.Size(464, 141);
             this.restaurantLogsDataGridView.TabIndex = 14;
-            // 
-            // fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource
-            // 
-            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataMember = "FK_dbo.RestaurantLogs_dbo.JournalSales_IdSale";
-            this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource.DataSource = this.journalSalesBindingSource;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(483, 104);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(237, 102);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(156, 69);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 21);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Добавить";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 48);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Цена";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 22);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Дата";
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journalSalesBindingSource, "Amount", true));
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(81, 45);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journalSalesBindingSource, "OrderDate", true));
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(81, 19);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 20);
-            this.textBox3.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -518,26 +475,19 @@
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column1.ValueMember = "IdDish";
             // 
-            // Column2
+            // groupBox2
             // 
-            this.Column2.DataPropertyName = "IdSale";
-            this.Column2.HeaderText = "id";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "OrderDate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "OrderDate";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Amount";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Price";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Location = new System.Drawing.Point(483, 104);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(237, 102);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
             // 
             // button5
             // 
@@ -549,6 +499,57 @@
             this.button5.Text = "Сохранить";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journalSalesBindingSource, "OrderDate", true));
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(81, 19);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(147, 20);
+            this.textBox3.TabIndex = 13;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(156, 69);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(72, 21);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Добавить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 48);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Цена";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 22);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Дата";
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journalSalesBindingSource, "Amount", true));
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(81, 45);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(147, 20);
+            this.textBox1.TabIndex = 7;
             // 
             // JournalForm
             // 
@@ -562,7 +563,7 @@
             this.Controls.Add(this.onmain_button);
             this.Controls.Add(this.journalSalesDataGridView);
             this.Controls.Add(this.journalSalesBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "JournalForm";
             this.Text = "JournalForm";
             this.Load += new System.EventHandler(this.JournalForm_Load);
@@ -572,12 +573,12 @@
             this.journalSalesBindingNavigator.ResumeLayout(false);
             this.journalSalesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantLogsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
