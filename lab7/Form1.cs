@@ -23,12 +23,12 @@ namespace lab7
             if (waitersForm == null || waitersForm.IsDisposed) //Если Форма отсутствует или не определена, 
                 waitersForm = new WaitersForm();  // то создать форму
             waitersForm.Show();              //открыть форму
-        }
+        } 
 
         private void dishesbutton_Click(object sender, EventArgs e)
         {
-            DishForm dishForm = new DishForm();
-            dishForm.Show();
+                DishForm dishForm = new DishForm();
+                dishForm.Show();
         }
 
         private void dishcategorybutton_Click(object sender, EventArgs e)
