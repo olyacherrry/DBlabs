@@ -1,6 +1,6 @@
 ﻿namespace lab6
 {
-    partial class Form2
+    partial class connectedTables
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace lab6
 {
-    public partial class Form2 : Form
+    public partial class connectedTables : Form
     {
-        public Form2()
+        public connectedTables()
         {
             InitializeComponent();
         }

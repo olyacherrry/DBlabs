@@ -45,7 +45,7 @@ namespace lab6
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            connectedTables form2 = new connectedTables();
             form2.ShowDialog();
         }
     }
