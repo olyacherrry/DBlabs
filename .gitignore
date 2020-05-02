@@ -55,7 +55,12 @@ BenchmarkDotNet.Artifacts/
 project.lock.json
 project.fragment.lock.json
 artifacts/
-App.config
+
+# Ignoge file App.config
+DBlabs/App.config
+lab4/App.config
+lab5/App.config
+lab6/App.config
 
 # StyleCop
 StyleCopReport.xml
