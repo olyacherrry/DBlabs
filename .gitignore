@@ -57,10 +57,13 @@ project.fragment.lock.json
 artifacts/
 
 # Ignoge file App.config
-DBlabs/App.config
+lab2/App.config
+lab3/App.config
 lab4/App.config
 lab5/App.config
 lab6/App.config
+lab7/App.config
+lab8/App.config
 
 # StyleCop
 StyleCopReport.xml
