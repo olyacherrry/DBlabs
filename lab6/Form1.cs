@@ -12,29 +12,23 @@ namespace lab6
 {
     public partial class Form1 : Form
     {
+        WaitersForm waitersForm;
         public Form1()
         {
             InitializeComponent();
         }
 
-        //private void waitersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        //{
-        //    this.Validate();
-        //    this.waitersBindingSource.EndEdit();
-        //    this.tableAdapterManager.UpdateAll(this.restaurantAppDataSet);
-
-        //}
-
         private void waitersbutton_Click(object sender, EventArgs e)
         {
-            WaitersForm waitersForm = new WaitersForm();
-            waitersForm.Show();
-        }
+            if (waitersForm == null || waitersForm.IsDisposed) //Если Форма отсутствует или не определена, 
+                waitersForm = new WaitersForm();  // то создать форму
+            waitersForm.Show();              //открыть форму
+        } 
 
         private void dishesbutton_Click(object sender, EventArgs e)
         {
-            DishForm dishForm = new DishForm();
-            dishForm.Show();
+                DishForm dishForm = new DishForm();
+                dishForm.Show();
         }
 
         private void dishcategorybutton_Click(object sender, EventArgs e)
