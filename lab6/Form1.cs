@@ -13,6 +13,7 @@ namespace lab6
     public partial class Form1 : Form
     {
         WaitersForm waitersForm;
+        //connectedTables form2;
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +48,10 @@ namespace lab6
         {
             connectedTables form2 = new connectedTables();
             form2.ShowDialog();
+
+            //if (form2 == null || form2.IsDisposed) //Если Форма отсутствует или не определена, 
+            //    form2 = new connectedTables();  // то создать форму
+            //form2.Show();
         }
     }
 }

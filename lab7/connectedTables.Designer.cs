@@ -42,7 +42,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKdboDishesdboCategoryDishesIdCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.onmain_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
@@ -90,9 +89,10 @@
             this.idCategoryComboBox.DataSource = this.categoryDishesBindingSource;
             this.idCategoryComboBox.DisplayMember = "NameCategory";
             this.idCategoryComboBox.FormattingEnabled = true;
-            this.idCategoryComboBox.Location = new System.Drawing.Point(328, 14);
+            this.idCategoryComboBox.Location = new System.Drawing.Point(492, 22);
+            this.idCategoryComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.idCategoryComboBox.Name = "idCategoryComboBox";
-            this.idCategoryComboBox.Size = new System.Drawing.Size(121, 21);
+            this.idCategoryComboBox.Size = new System.Drawing.Size(180, 28);
             this.idCategoryComboBox.TabIndex = 2;
             this.idCategoryComboBox.ValueMember = "IdCategory";
             // 
@@ -108,64 +108,63 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dishesDataGridView.DataSource = this.fKdboDishesdboCategoryDishesIdCategoryBindingSource;
-            this.dishesDataGridView.Location = new System.Drawing.Point(12, 41);
+            this.dishesDataGridView.Location = new System.Drawing.Point(18, 63);
+            this.dishesDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dishesDataGridView.Name = "dishesDataGridView";
             this.dishesDataGridView.ReadOnly = true;
-            this.dishesDataGridView.Size = new System.Drawing.Size(437, 220);
+            this.dishesDataGridView.RowHeadersWidth = 62;
+            this.dishesDataGridView.Size = new System.Drawing.Size(656, 338);
             this.dishesDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "IdDish";
             this.dataGridViewTextBoxColumn1.HeaderText = "IdDish";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "NameDish";
             this.dataGridViewTextBoxColumn2.HeaderText = "NameDish";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Price";
             this.dataGridViewTextBoxColumn3.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 150;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "IdCategory";
             this.dataGridViewTextBoxColumn4.HeaderText = "IdCategory";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 150;
             // 
             // fKdboDishesdboCategoryDishesIdCategoryBindingSource
             // 
             this.fKdboDishesdboCategoryDishesIdCategoryBindingSource.DataMember = "FK_dbo.Dishes_dbo.CategoryDishes_IdCategory";
             this.fKdboDishesdboCategoryDishesIdCategoryBindingSource.DataSource = this.categoryDishesBindingSource;
             // 
-            // onmain_button
-            // 
-            this.onmain_button.Location = new System.Drawing.Point(454, 206);
-            this.onmain_button.Margin = new System.Windows.Forms.Padding(2);
-            this.onmain_button.Name = "onmain_button";
-            this.onmain_button.Size = new System.Drawing.Size(95, 56);
-            this.onmain_button.TabIndex = 4;
-            this.onmain_button.Text = "на главную";
-            this.onmain_button.UseVisualStyleBackColor = true;
-            this.onmain_button.Click += new System.EventHandler(this.onmain_button_Click);
-            // 
             // connectedTables
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 273);
-            this.Controls.Add(this.onmain_button);
+            this.ClientSize = new System.Drawing.Size(708, 420);
             this.Controls.Add(this.dishesDataGridView);
             this.Controls.Add(this.idCategoryComboBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "connectedTables";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -193,6 +192,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource fKdboDishesdboCategoryDishesIdCategoryBindingSource;
-        private System.Windows.Forms.Button onmain_button;
     }
 }

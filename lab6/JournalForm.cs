@@ -75,7 +75,7 @@ namespace lab6
                 if (restaurantLogsDataGridView[1, i].Value != null)
                 {
                     int amount = Convert.ToInt32(restaurantLogsDataGridView[1, i].Value);
-                    RestaurantAppDataSet.DishesRow price =  restaurantAppDataSet.Dishes.FirstOrDefault(x => x.IdDish == Convert.ToInt32(restaurantLogsDataGridView[4, i].Value));
+                    RestaurantAppDataSet.DishesRow price =  restaurantAppDataSet.Dishes.FirstOrDefault(x => x.IdDish == Convert.ToInt32(restaurantLogsDataGridView[2, i].Value));
                     summa += (price.Price * amount);
                 }
             }

@@ -3,6 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+Properties/**
+
 # User-specific files
 *.rsuser
 *.suo
@@ -64,6 +66,7 @@ lab5/App.config
 lab6/App.config
 lab7/App.config
 lab8/App.config
+*App.config
 
 # StyleCop
 StyleCopReport.xml
