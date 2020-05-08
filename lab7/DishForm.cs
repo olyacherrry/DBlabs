@@ -75,5 +75,14 @@ namespace lab7
         {
             this.dishesBindingSource.MoveFirst();
         }
+
+        private void listOfCategories_Click(object sender, EventArgs e)
+        {
+            CategoryDishForm categoryDishForm = new CategoryDishForm();
+            if (categoryDishForm.ShowDialog() == DialogResult.OK)
+            {
+                this.categoryDishesTableAdapter.Fill(this.restaurantAppDataSet.CategoryDishes);
+            }
+        }
     }
 }

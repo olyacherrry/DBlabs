@@ -174,7 +174,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -219,6 +218,8 @@
             // 
             // categoryDishesDataGridView
             // 
+            this.categoryDishesDataGridView.AllowUserToAddRows = false;
+            this.categoryDishesDataGridView.AllowUserToDeleteRows = false;
             this.categoryDishesDataGridView.AutoGenerateColumns = false;
             this.categoryDishesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.categoryDishesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -229,6 +230,7 @@
             this.categoryDishesDataGridView.Location = new System.Drawing.Point(8, 50);
             this.categoryDishesDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.categoryDishesDataGridView.Name = "categoryDishesDataGridView";
+            this.categoryDishesDataGridView.ReadOnly = true;
             this.categoryDishesDataGridView.RowHeadersWidth = 62;
             this.categoryDishesDataGridView.RowTemplate.Height = 28;
             this.categoryDishesDataGridView.Size = new System.Drawing.Size(247, 188);
@@ -240,9 +242,11 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "NameCategory";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // onmain_button
             // 
+            this.onmain_button.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.onmain_button.Location = new System.Drawing.Point(260, 270);
             this.onmain_button.Margin = new System.Windows.Forms.Padding(2);
             this.onmain_button.Name = "onmain_button";

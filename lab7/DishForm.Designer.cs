@@ -68,6 +68,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listOfCategories = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingNavigator)).BeginInit();
@@ -126,9 +127,9 @@
             this.dishesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.dishesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.dishesBindingNavigator.Name = "dishesBindingNavigator";
-            this.dishesBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.dishesBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.dishesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.dishesBindingNavigator.Size = new System.Drawing.Size(728, 38);
+            this.dishesBindingNavigator.Size = new System.Drawing.Size(485, 31);
             this.dishesBindingNavigator.TabIndex = 0;
             this.dishesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -138,13 +139,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 28);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -154,7 +155,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
@@ -163,7 +164,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -172,13 +173,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -186,14 +187,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -201,7 +202,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -210,28 +211,30 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // dishesBindingNavigatorSaveItem
             // 
             this.dishesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.dishesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("dishesBindingNavigatorSaveItem.Image")));
             this.dishesBindingNavigatorSaveItem.Name = "dishesBindingNavigatorSaveItem";
-            this.dishesBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
+            this.dishesBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
             this.dishesBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.dishesBindingNavigatorSaveItem.Click += new System.EventHandler(this.dishesBindingNavigatorSaveItem_Click);
             // 
             // onmain_button
             // 
-            this.onmain_button.Location = new System.Drawing.Point(555, 594);
+            this.onmain_button.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.onmain_button.Location = new System.Drawing.Point(370, 386);
+            this.onmain_button.Margin = new System.Windows.Forms.Padding(2);
             this.onmain_button.Name = "onmain_button";
-            this.onmain_button.Size = new System.Drawing.Size(142, 86);
+            this.onmain_button.Size = new System.Drawing.Size(95, 56);
             this.onmain_button.TabIndex = 3;
             this.onmain_button.Text = "на главную";
             this.onmain_button.UseVisualStyleBackColor = true;
@@ -240,18 +243,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(276, 51);
+            this.label1.Location = new System.Drawing.Point(184, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 20);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Блюда";
             // 
             // buttonNext
             // 
-            this.buttonNext.Location = new System.Drawing.Point(555, 483);
-            this.buttonNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNext.Location = new System.Drawing.Point(370, 314);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(142, 35);
+            this.buttonNext.Size = new System.Drawing.Size(95, 23);
             this.buttonNext.TabIndex = 13;
             this.buttonNext.Text = "Следующая";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -259,10 +262,9 @@
             // 
             // buttonPrev
             // 
-            this.buttonPrev.Location = new System.Drawing.Point(555, 438);
-            this.buttonPrev.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonPrev.Location = new System.Drawing.Point(370, 285);
             this.buttonPrev.Name = "buttonPrev";
-            this.buttonPrev.Size = new System.Drawing.Size(142, 35);
+            this.buttonPrev.Size = new System.Drawing.Size(95, 23);
             this.buttonPrev.TabIndex = 12;
             this.buttonPrev.Text = "Предыдущая";
             this.buttonPrev.UseVisualStyleBackColor = true;
@@ -270,10 +272,9 @@
             // 
             // buttonLast
             // 
-            this.buttonLast.Location = new System.Drawing.Point(555, 120);
-            this.buttonLast.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonLast.Location = new System.Drawing.Point(370, 78);
             this.buttonLast.Name = "buttonLast";
-            this.buttonLast.Size = new System.Drawing.Size(142, 35);
+            this.buttonLast.Size = new System.Drawing.Size(95, 23);
             this.buttonLast.TabIndex = 11;
             this.buttonLast.Text = "Последняя";
             this.buttonLast.UseVisualStyleBackColor = true;
@@ -281,10 +282,9 @@
             // 
             // buttonFirst
             // 
-            this.buttonFirst.Location = new System.Drawing.Point(555, 75);
-            this.buttonFirst.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonFirst.Location = new System.Drawing.Point(370, 49);
             this.buttonFirst.Name = "buttonFirst";
-            this.buttonFirst.Size = new System.Drawing.Size(142, 35);
+            this.buttonFirst.Size = new System.Drawing.Size(95, 23);
             this.buttonFirst.TabIndex = 10;
             this.buttonFirst.Text = "Первая";
             this.buttonFirst.UseVisualStyleBackColor = true;
@@ -292,10 +292,9 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(321, 645);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonSave.Location = new System.Drawing.Point(214, 419);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(142, 35);
+            this.buttonSave.Size = new System.Drawing.Size(95, 23);
             this.buttonSave.TabIndex = 27;
             this.buttonSave.Text = "Сохранить";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -303,10 +302,9 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(170, 645);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonAdd.Location = new System.Drawing.Point(113, 419);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(142, 35);
+            this.buttonAdd.Size = new System.Drawing.Size(95, 23);
             this.buttonAdd.TabIndex = 26;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -314,10 +312,9 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(18, 645);
-            this.buttonRemove.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonRemove.Location = new System.Drawing.Point(12, 419);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(142, 35);
+            this.buttonRemove.Size = new System.Drawing.Size(95, 23);
             this.buttonRemove.TabIndex = 25;
             this.buttonRemove.Text = "Удалить";
             this.buttonRemove.UseVisualStyleBackColor = true;
@@ -326,39 +323,35 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 578);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(9, 376);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 20);
+            this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 24;
             this.label5.Text = "Price";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 538);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(9, 350);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 23;
             this.label2.Text = "NameDish";
             // 
             // textBox4
             // 
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dishesBindingSource, "Price", true));
-            this.textBox4.Location = new System.Drawing.Point(105, 568);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox4.Location = new System.Drawing.Point(70, 369);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(356, 26);
+            this.textBox4.Size = new System.Drawing.Size(239, 20);
             this.textBox4.TabIndex = 22;
             // 
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dishesBindingSource, "NameDish", true));
-            this.textBox1.Location = new System.Drawing.Point(105, 528);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Location = new System.Drawing.Point(70, 343);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(356, 26);
+            this.textBox1.Size = new System.Drawing.Size(239, 20);
             this.textBox1.TabIndex = 21;
             // 
             // categoryDishesBindingSource
@@ -372,6 +365,8 @@
             // 
             // dishesDataGridView
             // 
+            this.dishesDataGridView.AllowUserToAddRows = false;
+            this.dishesDataGridView.AllowUserToDeleteRows = false;
             this.dishesDataGridView.AutoGenerateColumns = false;
             this.dishesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dishesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -381,11 +376,11 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dishesDataGridView.DataSource = this.dishesBindingSource;
-            this.dishesDataGridView.Location = new System.Drawing.Point(18, 75);
-            this.dishesDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dishesDataGridView.Location = new System.Drawing.Point(12, 49);
             this.dishesDataGridView.Name = "dishesDataGridView";
+            this.dishesDataGridView.ReadOnly = true;
             this.dishesDataGridView.RowHeadersWidth = 62;
-            this.dishesDataGridView.Size = new System.Drawing.Size(525, 443);
+            this.dishesDataGridView.Size = new System.Drawing.Size(350, 288);
             this.dishesDataGridView.TabIndex = 29;
             // 
             // dataGridViewTextBoxColumn1
@@ -402,6 +397,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "NameDish";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -409,6 +405,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Price";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -418,6 +415,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "IdCategory";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn4.ValueMember = "IdCategory";
@@ -429,18 +427,29 @@
             this.comboBox1.DisplayMember = "NameCategory";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(105, 603);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox1.Location = new System.Drawing.Point(70, 392);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(356, 28);
+            this.comboBox1.Size = new System.Drawing.Size(239, 21);
             this.comboBox1.TabIndex = 30;
             this.comboBox1.ValueMember = "IdCategory";
             // 
+            // listOfCategories
+            // 
+            this.listOfCategories.Location = new System.Drawing.Point(352, 344);
+            this.listOfCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.listOfCategories.Name = "listOfCategories";
+            this.listOfCategories.Size = new System.Drawing.Size(113, 25);
+            this.listOfCategories.TabIndex = 31;
+            this.listOfCategories.Text = "Список категорий";
+            this.listOfCategories.UseVisualStyleBackColor = true;
+            this.listOfCategories.Click += new System.EventHandler(this.listOfCategories_Click);
+            // 
             // DishForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 711);
+            this.ClientSize = new System.Drawing.Size(485, 462);
+            this.Controls.Add(this.listOfCategories);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dishesDataGridView);
             this.Controls.Add(this.buttonSave);
@@ -457,6 +466,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.onmain_button);
             this.Controls.Add(this.dishesBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DishForm";
             this.Text = "DishForm";
             this.Load += new System.EventHandler(this.DishForm_Load);
@@ -512,5 +522,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button listOfCategories;
     }
 }

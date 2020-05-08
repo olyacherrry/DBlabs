@@ -94,13 +94,20 @@ namespace lab7
         private void listOfItems_Click(object sender, EventArgs e)
         {
             DishForm dishForm = new DishForm();
-            dishForm.Show();
+            if(dishForm.ShowDialog() == DialogResult.OK)
+            {
+                this.dishesTableAdapter.Fill(this.restaurantAppDataSet.Dishes);
+            }
         }
 
         private void listOfCategories_Click(object sender, EventArgs e)
         {
             CategoryDishForm categoryDishForm = new CategoryDishForm();
-            categoryDishForm.ShowDialog();
+            if (categoryDishForm.ShowDialog() == DialogResult.OK)
+            {
+                this.journalSalesTableAdapter.Fill(this.restaurantAppDataSet.JournalSales);
+                this.dishesTableAdapter.Fill(this.restaurantAppDataSet.Dishes);
+            }
         }
     }
 }
