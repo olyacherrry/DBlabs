@@ -33,7 +33,6 @@ namespace lab7
             this.dishesTableAdapter.Fill(this.restaurantAppDataSet.Dishes);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "restaurantAppDataSet.JournalSales". При необходимости она может быть перемещена или удалена.
             this.journalSalesTableAdapter.Fill(this.restaurantAppDataSet.JournalSales);
-
         }
 
         private void onmain_button_Click(object sender, EventArgs e)
