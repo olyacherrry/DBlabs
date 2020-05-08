@@ -91,5 +91,17 @@ namespace lab7
             this.journalSalesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.restaurantAppDataSet);
         }
+
+        private void listOfItems_Click(object sender, EventArgs e)
+        {
+            DishForm dishForm = new DishForm();
+            dishForm.Show();
+        }
+
+        private void listOfCategories_Click(object sender, EventArgs e)
+        {
+            CategoryDishForm categoryDishForm = new CategoryDishForm();
+            categoryDishForm.ShowDialog();
+        }
     }
 }

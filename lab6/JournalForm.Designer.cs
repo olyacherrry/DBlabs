@@ -146,7 +146,7 @@
             this.journalSalesBindingNavigator.Name = "journalSalesBindingNavigator";
             this.journalSalesBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.journalSalesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.journalSalesBindingNavigator.Size = new System.Drawing.Size(1257, 33);
+            this.journalSalesBindingNavigator.Size = new System.Drawing.Size(1257, 38);
             this.journalSalesBindingNavigator.TabIndex = 0;
             this.journalSalesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -156,7 +156,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
