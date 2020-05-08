@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab8.ReportView;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -83,6 +84,11 @@ namespace lab8
             {
                 this.categoryDishesTableAdapter.Fill(this.restaurantAppDataSet.CategoryDishes);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            (new ReportViewDish()).ShowDialog();
         }
     }
 }

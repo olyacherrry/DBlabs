@@ -69,6 +69,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listOfCategories = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dishesBindingNavigator)).BeginInit();
@@ -231,10 +232,10 @@
             // onmain_button
             // 
             this.onmain_button.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.onmain_button.Location = new System.Drawing.Point(370, 386);
+            this.onmain_button.Location = new System.Drawing.Point(370, 407);
             this.onmain_button.Margin = new System.Windows.Forms.Padding(2);
             this.onmain_button.Name = "onmain_button";
-            this.onmain_button.Size = new System.Drawing.Size(95, 56);
+            this.onmain_button.Size = new System.Drawing.Size(95, 35);
             this.onmain_button.TabIndex = 3;
             this.onmain_button.Text = "на главную";
             this.onmain_button.UseVisualStyleBackColor = true;
@@ -444,11 +445,24 @@
             this.listOfCategories.UseVisualStyleBackColor = true;
             this.listOfCategories.Click += new System.EventHandler(this.listOfCategories_Click);
             // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Location = new System.Drawing.Point(370, 373);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 30);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "меню";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DishForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 462);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listOfCategories);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dishesDataGridView);
@@ -523,5 +537,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button listOfCategories;
+        private System.Windows.Forms.Button button1;
     }
 }

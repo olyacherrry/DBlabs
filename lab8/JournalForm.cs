@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab8.ReportView;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -108,6 +109,11 @@ namespace lab8
                 this.journalSalesTableAdapter.Fill(this.restaurantAppDataSet.JournalSales);
                 this.dishesTableAdapter.Fill(this.restaurantAppDataSet.Dishes);
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            (new ReportViewJournal()).ShowDialog();
         }
     }
 }

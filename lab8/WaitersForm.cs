@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab8.ReportView;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,6 +73,11 @@ namespace lab8
             this.Validate();
             this.waitersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.restaurantAppDataSet);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            (new ReportViewWaiter(textBox1.Text, textBox2.Text)).ShowDialog();
         }
     }
 }

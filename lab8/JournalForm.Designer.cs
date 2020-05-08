@@ -79,6 +79,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listOfItems = new System.Windows.Forms.Button();
             this.listOfCategories = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journalSalesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurantAppDataSet)).BeginInit();
@@ -105,7 +106,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(5, 69);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(72, 21);
             this.button2.TabIndex = 11;
@@ -136,7 +137,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(81, 69);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 21);
             this.button1.TabIndex = 10;
@@ -152,7 +153,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(483, 109);
+            this.groupBox2.Location = new System.Drawing.Point(478, 50);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(237, 102);
             this.groupBox2.TabIndex = 22;
@@ -161,7 +162,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(8, 69);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(72, 21);
             this.button5.TabIndex = 14;
@@ -174,7 +175,7 @@
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journalSalesBindingSource, "OrderDate", true));
             this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(81, 19);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(147, 20);
             this.textBox3.TabIndex = 13;
@@ -192,7 +193,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(156, 69);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(72, 21);
             this.button4.TabIndex = 11;
@@ -215,7 +216,7 @@
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.journalSalesBindingSource, "Amount", true));
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(81, 45);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(147, 20);
             this.textBox1.TabIndex = 7;
@@ -251,7 +252,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Location = new System.Drawing.Point(483, 255);
+            this.groupBox1.Location = new System.Drawing.Point(478, 216);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(237, 102);
             this.groupBox1.TabIndex = 21;
@@ -261,7 +262,7 @@
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fKdboRestaurantLogsdboJournalSalesIdSaleBindingSource, "Amount", true));
             this.textBox2.Location = new System.Drawing.Point(81, 45);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(147, 20);
             this.textBox2.TabIndex = 7;
@@ -269,7 +270,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(157, 69);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(72, 21);
             this.button3.TabIndex = 12;
@@ -301,7 +302,7 @@
             this.amountDataGridViewTextBoxColumn});
             this.journalSalesDataGridView.DataSource = this.journalSalesBindingSource;
             this.journalSalesDataGridView.Location = new System.Drawing.Point(8, 50);
-            this.journalSalesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.journalSalesDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.journalSalesDataGridView.Name = "journalSalesDataGridView";
             this.journalSalesDataGridView.ReadOnly = true;
             this.journalSalesDataGridView.RowHeadersWidth = 62;
@@ -335,10 +336,10 @@
             // 
             // onmain_button
             // 
-            this.onmain_button.Location = new System.Drawing.Point(732, 300);
-            this.onmain_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.onmain_button.Location = new System.Drawing.Point(617, 323);
+            this.onmain_button.Margin = new System.Windows.Forms.Padding(2);
             this.onmain_button.Name = "onmain_button";
-            this.onmain_button.Size = new System.Drawing.Size(98, 58);
+            this.onmain_button.Size = new System.Drawing.Size(98, 34);
             this.onmain_button.TabIndex = 18;
             this.onmain_button.Text = "на главную";
             this.onmain_button.UseVisualStyleBackColor = true;
@@ -380,7 +381,7 @@
             this.journalSalesBindingNavigator.Name = "journalSalesBindingNavigator";
             this.journalSalesBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.journalSalesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.journalSalesBindingNavigator.Size = new System.Drawing.Size(838, 31);
+            this.journalSalesBindingNavigator.Size = new System.Drawing.Size(726, 31);
             this.journalSalesBindingNavigator.TabIndex = 23;
             this.journalSalesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -545,8 +546,8 @@
             // 
             // listOfItems
             // 
-            this.listOfItems.Location = new System.Drawing.Point(483, 225);
-            this.listOfItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listOfItems.Location = new System.Drawing.Point(478, 157);
+            this.listOfItems.Margin = new System.Windows.Forms.Padding(2);
             this.listOfItems.Name = "listOfItems";
             this.listOfItems.Size = new System.Drawing.Size(109, 25);
             this.listOfItems.TabIndex = 24;
@@ -556,8 +557,8 @@
             // 
             // listOfCategories
             // 
-            this.listOfCategories.Location = new System.Drawing.Point(607, 225);
-            this.listOfCategories.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listOfCategories.Location = new System.Drawing.Point(602, 157);
+            this.listOfCategories.Margin = new System.Windows.Forms.Padding(2);
             this.listOfCategories.Name = "listOfCategories";
             this.listOfCategories.Size = new System.Drawing.Size(113, 25);
             this.listOfCategories.TabIndex = 25;
@@ -565,11 +566,23 @@
             this.listOfCategories.UseVisualStyleBackColor = true;
             this.listOfCategories.Click += new System.EventHandler(this.listOfCategories_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(478, 323);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(98, 34);
+            this.button6.TabIndex = 26;
+            this.button6.Text = "отчет";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // JournalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 367);
+            this.ClientSize = new System.Drawing.Size(726, 367);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.listOfCategories);
             this.Controls.Add(this.listOfItems);
             this.Controls.Add(this.restaurantLogsDataGridView);
@@ -580,7 +593,7 @@
             this.Controls.Add(this.journalSalesDataGridView);
             this.Controls.Add(this.onmain_button);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "JournalForm";
             this.Text = "JournalForm";
             this.Load += new System.EventHandler(this.JournalForm_Load);
@@ -654,5 +667,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Button listOfItems;
         private System.Windows.Forms.Button listOfCategories;
+        private System.Windows.Forms.Button button6;
     }
 }
